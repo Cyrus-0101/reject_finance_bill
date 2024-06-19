@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+     <!-- Desktop sidebar -->
+	    {% include "components/desktop_sidebar.html" %}
+      <!-- Mobile sidebar -->
+      <!-- Backdrop -->
+	    {% include "components/mobile_sidebar.html" %}
+            <!-- Mobile hamburger -->
+	    {% include "components/mobile_hamburger.html" %}
+            <!-- Search input -->
+	    {% include "components/search_input.html" %}
+              <!-- Theme toggler -->
+	    {% include "components/theme_toggler.html" %}
+              <!-- Notifications menu -->
+	    {% include "components/notification_menu.html" %}
+                  <!-- Notification badge -->
+	    {% include "components/notification_badge.html" %}
+              <!-- Profile menu -->
+	    {% include "components/profile_menu.html" %}
+        <main class="h-full pb-16 overflow-y-auto">
+          <div class="container px-6 mx-auto grid">
+            <h2
+              class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200"
+            >
+              Events happening in real time
+            </h2>
+            <!-- CTA -->
+	    {% include "components/cta.html" %}
+            <!-- Big section cards -->
+            <h4
+              class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300"
+            >
+              Big section cards
+            </h4>
+            <div
+              class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800"
+            >
+              <p class="text-sm text-gray-600 dark:text-gray-400">
+                Large, full width sections goes here
+              </p>
+            </div>
+
+            <!-- Responsive cards -->
+            <h4
+              class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300"
+            >
+              Protest Statistics and Reports
+            </h4>
+	    {% include "components/dashboard_cards.html" %}
+
+            <!-- Cards with title -->
+	    {% include "components/cards_with_titles.html" %}
+                </div>
+          </div>
+        </main>
+{% endblock %}

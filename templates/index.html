@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+    <div
+      class="flex h-screen bg-gray-50 dark:bg-gray-900"
+      :class="{ 'overflow-hidden': isSideMenuOpen }"
+    >
+      <!-- Desktop sidebar -->
+	    {% include "components/desktop_sidebar.html" %}
+      <!-- Mobile sidebar -->
+      <!-- Backdrop -->
+	    {% include "components/mobile_sidebar.html" %}
+             <!-- Mobile hamburger -->
+	    {% include "components/mobile_hamburger.html" %}
+            <!-- Search input -->
+	    {% include "components/search_input.html" %}
+              <!-- Theme toggler -->
+	    {% include "components/theme_toggler.html" %}
+              <!-- Notifications menu -->
+	    {% include "components/notification_menu.html" %}
+                 <!-- Notification badge -->
+	    {% include "components/notification_badge.html" %}
+                          <!-- Profile menu -->
+	    {% include "components/profile_menu.html" %}
+        	<main class="h-full overflow-y-auto">
+          <div class="container px-6 mx-auto grid">
+            <h2
+              class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200"
+            >
+              Dashboard
+            </h2>
+            <!-- CTA -->
+	    {% include "components/cta.html" %}
+            <!-- Cards -->
+	    {% include "components/dashboard_cards.html" %}
+            
+            <!-- New Table -->
+	    {% include "components/tables.html" %}
+	    {% include "components/table_paging.html" %}
+         
+{% endblock %}
+
