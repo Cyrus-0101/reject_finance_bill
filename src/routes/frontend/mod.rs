@@ -1,12 +1,18 @@
+mod handlers;
 use askama::Template;
 use axum::{response::{Html, IntoResponse, Response}, routing::{get, post}, Router};
 use hyper::StatusCode;
+
+use self::handlers::{events, form, home};
 
 
 
 pub fn frontend_routes() -> Router{
     
     Router::new()
+        .route("/", get(home))
+        .route("/form", get(form))
+        .route("/events", get(events))
 }
 
 
