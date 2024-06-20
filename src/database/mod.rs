@@ -2,13 +2,4 @@
 
 pub mod prelude;
 
-pub mod address;
-pub mod category;
-pub mod customer;
-pub mod customer_and_address;
-pub mod product;
-pub mod product_review;
-pub mod sale;
-pub mod sale_and_product;
-pub mod status_update;
-pub mod subcategory;
+pub mod userdetails;

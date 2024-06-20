@@ -40,12 +40,14 @@
               <!-- Invalid input -->
 
 
+
 <!-- Invalid input -->
+<form method="post" action="/getd"
 <label class="block text-sm">
   <span class="text-gray-700 dark:text-gray-400">
     First Name
   </span>
-  <input
+  <input name="first_name"
     class="block w-full mt-1 text-sm border-red-600 dark:text-gray-300 dark:bg-gray-700 focus:border-red-400 focus:outline-none focus:shadow-outline-red form-input"
     placeholder="Brian"
   />
@@ -59,7 +61,7 @@
   <span class="text-gray-700 dark:text-gray-400">
     Last Name
   </span>
-  <input
+  <input name="last_name"
     class="block w-full mt-1 text-sm border-green-600 dark:text-gray-300 dark:bg-gray-700 focus:border-green-400 focus:outline-none focus:shadow-outline-green form-input"
     placeholder="Onyi"
   />
@@ -67,13 +69,22 @@
     Enter only Your Last Name
   </span>
 </label>
-
+<!-- Username -->
+<label class="block mt-4 text-sm">
+  <span class="text-gray-700 dark:text-gray-400">
+    Username
+  </span>
+  <input name="username"
+    class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
+    placeholder="Username"
+  />
+</label>
 <!-- Location -->
 <label class="block mt-4 text-sm">
   <span class="text-gray-700 dark:text-gray-400">
     Location
   </span>
-  <input
+  <input name="location"
     class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
     placeholder="Nairobi"
   />
@@ -84,7 +95,7 @@
   <span class="text-gray-700 dark:text-gray-400">
     Police Station
   </span>
-  <input
+  <input name="police_station"
     class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
     placeholder="Central Police Station"
   />
@@ -95,7 +106,7 @@
   <span class="text-gray-700 dark:text-gray-400">
     Car Number Plate
   </span>
-  <input
+  <input name="no_plate"
     class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
     placeholder="KAA 123A"
   />
@@ -123,6 +134,7 @@
   </button>
 </div>
 
+</form>
           </div>
 	  </main>
 {% endblock %}
