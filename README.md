@@ -47,6 +47,23 @@ reject-finance-bill/
 - **target/:** Auto-generated directory where compiled binaries and libraries are stored.
 - **templates/:** Directory for HTML template files used in the project.
 
+### Running the project locally
+
+Create a `.env` file with the following:
+```
+PORT="3000"
+BASE_ADDRESS="0.0.0.0"
+DATABASE_URL=postgresql://postgres:password@localhost:5432/civicdatabase
+
+```
+On your postgress run the init.sql inside database_setup directory with the database name civicdatabase.
+
+Then run
+```
+cargo watch -x run -w templates -w src
+```
+
+
 ### Submitting Changes
 To contribute to the project, follow these steps:
 
