@@ -5,16 +5,6 @@ use serde::{Deserialize, Serialize};
 use super:: HtmlTemplate;
 
 #[derive(Template)]
-#[template(path="index.html")]
-pub struct HomeTemplate{}
-
-pub async fn home() -> impl IntoResponse{
-    let temp = HomeTemplate{};
-    HtmlTemplate(temp)
-
-}
-
-#[derive(Template)]
 #[template(path="forms.html")]
 pub struct FormTemplate{}
 

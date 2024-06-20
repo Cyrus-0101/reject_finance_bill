@@ -1,18 +1,31 @@
 mod handlers;
+mod get_user_details;
+mod dashboard;
+
+
+use std::sync::Arc;
+
 use askama::Template;
 use axum::{response::{Html, IntoResponse, Response}, routing::{get, post}, Router};
 use hyper::StatusCode;
+use reqwest::Client;
 
-use self::handlers::{events, form, home};
+use crate::utils::app_state::AppState;
+
+use self::{dashboard::home, get_user_details::get_details, handlers::{events, form}};
 
 
 
 pub fn frontend_routes() -> Router{
     
+    let client = Client::new();
+
     Router::new()
         .route("/", get(home))
         .route("/form", get(form))
         .route("/events", get(events))
+        .route("/getd", post(get_details))
+        .with_state(client)
 }
 
 
